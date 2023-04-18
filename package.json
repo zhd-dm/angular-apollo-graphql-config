@@ -1,0 +1,26 @@
+{
+  "name": "angular-apollo-graphql-config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gql:download-schema": "npx apollo schema:download --skipSSLValidation --endpoint=https://spacex-production.up.railway.app ./graphql/generated/graphql-schema.json",
+    "gql:generate-code": "npx graphql-codegen --config=graphql-codegen.ts",
+    "gql:generate-code:watch": "npx graphql-codegen --config=graphql-codegen.ts --watch",
+    "gql:download-and-generate": "npm run gql:download-schema && npm run gql:generate-code"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/client": "3.7.0",
+    "apollo-angular": "^4.2.1",
+    "typescript": "^5.0.4"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^3.3.0",
+    "@graphql-codegen/near-operation-file-preset": "^2.4.0",
+    "@graphql-codegen/typescript": "^2.8.2",
+    "@graphql-codegen/typescript-apollo-angular": "^3.5.6",
+    "@graphql-codegen/typescript-operations": "^2.5.7"
+  }
+}

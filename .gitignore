@@ -1,0 +1,11 @@
+# IDE
+.vscode
+
+# Build
+dist
+node_modules
+*package-lock.json
+
+# Apollo graphql generated
+*graphql-schema.json
+*graphql-types.generated.ts
