@@ -1,0 +1,21 @@
+query Dragons {
+    dragons {
+        active
+        crew_capacity
+        diameter {
+            feet
+            meters
+        }
+        dry_mass_kg
+        id
+        name
+        orbit_duration_yr
+        trunk {
+            cargo {
+                solar_array
+            }
+        }
+        type
+        wikipedia
+    }
+}

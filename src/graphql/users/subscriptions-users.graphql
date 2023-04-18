@@ -1,0 +1,27 @@
+subscription Users_by_pk($usersByPkId: uuid!) {
+    users_by_pk(id: $usersByPkId) {
+        id
+        name
+        rocket
+        timestamp
+        twitter
+    }
+}
+
+subscription Users(
+    $orderBy: [users_order_by!],
+    $limit: Int,
+    $distinctOn: [users_select_column!]
+) {
+    users(
+        order_by: $orderBy,
+        limit: $limit,
+        distinct_on: $distinctOn
+    ) {
+        id
+        name
+        rocket
+        timestamp
+        twitter
+    }
+}

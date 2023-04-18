@@ -1,0 +1,12 @@
+mutation Update_users($where: users_bool_exp!) {
+    update_users(where: $where) {
+        affected_rows
+        returning {
+            id
+            name
+            rocket
+            timestamp
+            twitter
+        }
+    }
+}
